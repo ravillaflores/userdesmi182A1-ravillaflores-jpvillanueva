@@ -1,0 +1,10 @@
+Proposed Solution
+
+1. Oh No it's 6:30, I will be late!
+2. Checks fone app if the bus is already there
+3. Commuter prepares stuff to go, since bus will arrive after 25 mins
+4. Commuter walks to bus stop instead of rushing
+5. Commuter arrives at bus stop, and the bus will arrive in 15 mins
+6. Commuter decided to buy food and drinks for breakfast
+7. Commuter checks app again and bus will arrive in 7 mins
+8. Commuter rides Bus

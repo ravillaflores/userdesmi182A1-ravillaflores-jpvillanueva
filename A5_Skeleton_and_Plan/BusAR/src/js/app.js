@@ -65,16 +65,31 @@ $$('#my-login-screen .login-button').on('click', function () {
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
 
-$$('#button1').on('click', function () {
-  var txt = $$(this).text();
-  var num = parseInt(txt);
-  var rnd5 = (5 + Math.floor(Math.random() * num-5));
-  var res = rnd5;
-  if(rnd5 == 0) {
-    res = 'ARV';
-  }
-  else if (rnd5 <= 2) {
-    res = 'ARR'
-  }
-  $$(this).text(res);
+
+$$(document).on('DOMContentLoaded', function(){
+  var time = Date.now();
+  $$("#hidTime").text(time);
+
+  $$('#hidLineA').text($$('#btnLineA').text());
+  $$('#hidLineB').text($$('#btnLineB').text());
+});
+
+// Random Number Generator
+$$('a.main-button-time').on('click', function () {
+  var timeClick = Date.now();
+  var timeLoad = $$("#hidTime").text();
+  var numTimeClick = parseFloat(timeClick);
+  var numTimeLoad = parseFloat(timeLoad);
+  var secs = ((numTimeClick - numTimeLoad) / 1000);
+  var min = secs / 60;
+  var round = Math.floor(min);
+  var id = $$(this).attr('id');
+  var idU = id.substring(8,7);
+  var idText = 'hidLine'+idU;
+  alert(idText);
+  $$(idText).text('hello');
+  var thisText = $$(this).text();
+  var thisNum = parseInt(thisText);
+  var result = 8;
+  // alert('rounded: ' + round + ' min: ' + min + ' seconds: ' + secs);
 });

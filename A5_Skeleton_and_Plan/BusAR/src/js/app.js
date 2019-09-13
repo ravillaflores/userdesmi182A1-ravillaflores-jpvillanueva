@@ -86,7 +86,7 @@ $$('a.main-button-time').on('click', function () {
   var id = $$(this).attr('id');
   var idU = id.substring(8,7);
   var idText = 'hidLine'+idU;
-  alert(idText);
+  // alert(idText);
   $$(idText).text('hello');
   var thisText = $$(this).text();
   var thisNum = parseInt(thisText);

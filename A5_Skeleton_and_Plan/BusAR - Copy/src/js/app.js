@@ -11,9 +11,6 @@ import '../css/app.css';
 // Import Routes
 import routes from './routes.js';
 
-
-
-
 var app = new Framework7({
   root: '#app', // App root element
 

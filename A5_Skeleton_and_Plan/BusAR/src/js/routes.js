@@ -5,6 +5,8 @@ import FormPage from '../pages/form.f7.html';
 import CatalogPage from '../pages/catalog.f7.html';
 import ProductPage from '../pages/product.f7.html';
 import SettingsPage from '../pages/settings.f7.html';
+import BusListPage from '../pages/busList.f7.html';
+
 
 import Main from '../pages/main.f7.html';
 
@@ -17,10 +19,6 @@ var routes = [
     path: '/',
     component: Home,
   },
-  // {
-  //   path: '/',
-  //   component: Main,
-  // },
   {
     path: '/about/',
     component: AboutPage,
@@ -34,14 +32,14 @@ var routes = [
     component: CatalogPage,
   },
   {
+    path: '/busList/:stopcode',
+    component: BusListPage,
+  },
+  {
     path: '/product/:id/',
     component: ProductPage,
   },
-  {
-    path: '/settings/',
-    component: SettingsPage,
-  },
-
+ 
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage,

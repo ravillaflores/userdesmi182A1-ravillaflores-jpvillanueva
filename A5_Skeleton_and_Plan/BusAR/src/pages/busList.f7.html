@@ -1,0 +1,66 @@
+<template>
+  <div class="page" data-name="product">
+      <script type="text/javascript" src="js/app.js">
+
+
+      </script>
+      
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title" >{{busstop.stop.stopname}}</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div></div>
+      <div class="list links-list">
+        <div hidden></div>
+        <ul id='add-{{busstop.stop.stopcode}}'>
+          {{#each busstop}}
+            <p hidden id="t-{{stopcode}}">{{stopname}}</p>
+            {{#each buslist}}
+              {{#each ../../bus}}
+              {{#js_if "this.buscode == ../buscode"}}
+                <li>  
+                  <a href="" class="addBus" id="add-{{buscode}}" >{{this.name}}</a>
+                  <p hidden id="cap-{{buscode}}">{{this.cap}}</p>
+                  <p hidden id="type-{{buscode}}">{{this.type}}</p>
+                  <p hidden id="disp-{{buscode}}">{{../../../disp}}</p>
+                </li>
+              {{/js_if}}
+              {{/each}}
+            {{/each}}
+          {{/each}}
+          </ul>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      var stopCode = this.$route.params.stopcode;
+      var rootBusStop = this.$root.busstop;
+      var thisStop;
+      var bl;
+      rootBusStop.forEach(function (stop) {
+        if (stop.stopcode === stopCode) {
+          thisStop = stop;
+          bl = stop.buslist;
+        }
+      });
+
+      return {
+        busstop: {
+          stop: thisStop,
+        },
+        bus: this.$root.bus,
+      };
+    }
+  };
+</script>

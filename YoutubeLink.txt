@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 https://youtu.be/xbaB1iWT-FY
 https://www.youtube.com/watch?v=-qyz5-8RMlc - Paper Prototype
 https://www.youtube.com/watch?v=BJvyR2p2RLA - Digital Prototype
+=======
+https://youtu.be/-qyz5-8RMlc - paper prototype
+https://youtu.be/BJvyR2p2RLA - digital prototype
+>>>>>>> 321f2da2dedacf8e55182f16d5a676093d48df4b
